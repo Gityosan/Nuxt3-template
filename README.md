@@ -8,4 +8,4 @@
 - scss の stylelint 設定も追加しています
 - sass は dart sass を入れています
 - order は stylelint-config-recess-order を入れています。
-- vscode の拡張機能 prettier/eslint/stylelint を入れることをお勧めします。
+- vscode の拡張機能 prettier/eslint/stylelint/Vue Language Features (Volar) を入れることをお勧めします。
