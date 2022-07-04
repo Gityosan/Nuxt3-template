@@ -1,0 +1,19 @@
+{
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "editor.tabSize": 2,
+  "editor.hover.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.guides.bracketPairs": true,
+  "git.ignoreLimitWarning": true,
+  "eslint.run": "onSave",
+  "stylelint.validate": ["css", "scss", "less", "postcss"],
+  "css.validate": false,
+  "scss.validate": false
+}
