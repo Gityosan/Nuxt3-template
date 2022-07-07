@@ -7,6 +7,9 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@mdi/font": "^6.9.96",
+    "@mdi/js": "^6.9.96",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
     "@vuetify/vite-plugin": "^1.0.0-alpha.11",
