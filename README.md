@@ -4,6 +4,9 @@
 
 個人的に調べて 2022/6 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。
 
+- nuxt:3.0.0-rc.8
+- vuetify:3.0.0-beta.9
+- vuetify の設定(plugins)をしています
 - eslint/prettier/stylelint の設定を追加しています
 - scss の stylelint 設定も追加しています
 - sass は dart sass を入れています
@@ -12,20 +15,18 @@
 
 ## The preparation method
 
-### Commands
+1. `npx nuxi init appName`<br>
 
-`npx nuxi init appName`
+2. `yarn add -D vuetify@next sass @mdi/font @mdi/js`<br>
 
-`yarn add -D vuetify@next @vuetify/vite-plugin sass @mdi/font @mdi/js`
+3. `yarn add -D typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript`<br>
 
-`yarn add -D typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript`
+4. `yarn add -D eslint eslint-config-prettier eslint-plugin-nuxt prettier`<br>
 
-`yarn add -D eslint eslint-config-prettier eslint-plugin-nuxt postcss-html`
-
-`yarn add -D prettier stylelint stylelint-config-prettier stylelint-config-recess-order stylelint-config-standard-scss`
+5. `yarn add -D stylelint stylelint-config-prettier stylelint-config-recess-order stylelint-config-standard-scss postcss-html`<br>
 
 ## Getting Started
 
-`yarn install`
+1. `yarn install`
 
-`yarn dev`
+2. `yarn dev`
