@@ -7,24 +7,23 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@mdi/font": "^6.9.96",
-    "@mdi/js": "^6.9.96",
+    "@mdi/font": "^7.0.96",
+    "@mdi/js": "^7.0.96",
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
-    "@vuetify/vite-plugin": "^1.0.0-alpha.11",
-    "eslint": "^8.19.0",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^3.2.0",
-    "nuxt": "3.0.0-rc.4",
-    "postcss-html": "^1.4.1",
+    "nuxt": "^3.0.0-rc.8",
+    "postcss-html": "^1.5.0",
     "prettier": "^2.7.1",
-    "sass": "^1.53.0",
-    "stylelint": "^14.9.1",
+    "sass": "^1.54.5",
+    "stylelint": "^14.11.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
-    "stylelint-config-standard-scss": "^4.0.0",
-    "typescript": "^4.7.4",
-    "vuetify": "^3.0.0-beta.5"
+    "stylelint-config-standard-scss": "^5.0.0",
+    "typescript": "^4.8.2",
+    "vuetify": "^3.0.0-beta.9"
   }
 }
