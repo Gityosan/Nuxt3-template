@@ -1,11 +1,12 @@
 <script setup lang="ts">
-const error = useError()
-console.log(error.value)
+defineProps({
+  error: Object
+})
 const handleError = () => clearError({ redirect: '/' })
 </script>
 <template>
   <div>
-    <h1>{{ error.statusCode }}：{{ error.message }}</h1>
+    <h1>{{ error?.statusCode }}：{{ error?.message }}</h1>
     <v-btn @click="handleError">Clear errors</v-btn>
   </div>
 </template>
