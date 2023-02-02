@@ -2,10 +2,10 @@
 
 ## Nuxt3 の開発用テンプレートです
 
-個人的に調べて 2022/6 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。
+個人的に調べて 2023/1 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。
 
-- nuxt:3.0.0
-- vuetify:3.0.1
+- nuxt:3.1.1
+- vuetify:3.1.3
 - vuetify の設定(plugins)をしています
 - eslint/prettier/stylelint の設定を追加しています
 - scss の stylelint 設定も追加しています
