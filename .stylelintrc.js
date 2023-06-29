@@ -1,12 +1,7 @@
 module.exports = {
   customSyntax: 'postcss-html',
-  extends: [
-    'stylelint-config-standard-scss',
-    'stylelint-config-recess-order',
-    'stylelint-config-prettier'
-  ],
-  plugins: [],
-  ignoreFiles: ['**/node_modules/**', '**/.nuxt/**', '**/dist/**'],
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-recess-order'],
+  ignoreFiles: ['**/node_modules/**', '**/.nuxt/**', '**/.output/**', '**/dist/**'],
   rules: {
     // 'at-rule-no-unknown': false,
     'scss/at-rule-no-unknown': true,

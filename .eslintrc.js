@@ -2,18 +2,16 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2021: true,
-    node: true
+    node: true,
+    es2022: true
   },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
-    'plugin:nuxt/recommended',
     '@nuxtjs/eslint-config-typescript',
     'prettier'
   ],
-  plugins: [],
   rules: {
     // global settings
     semi: [2, 'never'],
