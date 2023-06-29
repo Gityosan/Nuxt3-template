@@ -24,7 +24,7 @@
 
 4. `yarn add -D eslint eslint-config-prettier eslint-plugin-nuxt prettier`<br>
 
-5. `yarn add -D stylelint stylelint-config-prettier stylelint-config-recess-order stylelint-config-standard-scss postcss-html`<br>
+5. `yarn add -D stylelint stylelint-config-recess-order stylelint-config-standard-scss postcss-html`<br>
 
 6. `npx nuxi@latest devtools enable`<br>
 
