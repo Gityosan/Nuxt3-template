@@ -2,10 +2,10 @@
 
 ## Nuxt3 の開発用テンプレートです
 
-個人的に調べて 2023/7 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。
+個人的に調べて 2023/9 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。
 
-- nuxt:3.6.1
-- vuetify:3.3.6
+- nuxt:3.7.1
+- vuetify:3.3.15
 - vuetify の設定(plugins)をしています
 - eslint/prettier/stylelint の設定を追加しています
 - scss の stylelint 設定も追加しています
@@ -18,7 +18,7 @@
 
 1. `npx nuxi init appName`<br>
 
-2. `yarn add -D vuetify vite-plugin-vuetify sass @mdi/font @mdi/js`<br>
+2. `yarn add -D vuetify vite-plugin-vuetify sass @mdi/font @nuxtjs/critters`<br>
 
 3. `yarn add -D typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript @types/node`<br>
 
