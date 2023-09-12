@@ -22,12 +22,19 @@ export default defineNuxtConfig({
     transpile: ['vuetify']
   },
   modules: [
+    '@nuxtjs/critters',
     (options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         if (config.plugins) config.plugins.push(vuetify())
       })
     }
   ],
+  critters: {
+    config: {
+      preload: 'swap',
+      pruneSource: true
+    }
+  },
   vite: {
     resolve: {
       alias: {
