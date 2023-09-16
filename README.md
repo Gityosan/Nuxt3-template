@@ -4,8 +4,8 @@
 
 個人的に調べて 2023/9 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。
 
-- nuxt:3.7.1
-- vuetify:3.3.15
+- nuxt:3.7.3
+- vuetify:3.3.16
 - vuetify の設定(plugins)をしています
 - eslint/prettier/stylelint の設定を追加しています
 - scss の stylelint 設定も追加しています
