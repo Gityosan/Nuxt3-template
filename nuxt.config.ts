@@ -51,5 +51,8 @@ export default defineNuxtConfig({
       }
     }
   },
-  runtimeConfig: { public: {} }
+  runtimeConfig: { public: {} },
+  devtools: {
+    enabled: true
+  }
 })
