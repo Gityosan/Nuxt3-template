@@ -15,5 +15,6 @@
   "eslint.run": "onSave",
   "stylelint.validate": ["css", "scss", "less", "postcss"],
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "less.validate": false
 }
