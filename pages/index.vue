@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useHead({ title: 'index' })
-const { count, increment, decrement } = useCounter()
+const { count, increment } = useCounter()
 </script>
 <template>
-  <div class="pa-10 wrapper">
+  <div class="pa-16 wrapper">
     <div class="d-flex align-center" style="height: 600px; gap: 20px">
       <div class="flex-grow-1">
         <h1 class="text-h2 font-weight-bold mb-5" style="line-height: 1.3">Nuxt 3 Template</h1>
@@ -24,7 +24,6 @@ const { count, increment, decrement } = useCounter()
               v-bind="props"
             />
           </v-hover>
-
           <span>{{ count }}</span>
         </div>
       </div>
