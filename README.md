@@ -2,34 +2,33 @@
 
 ## Nuxt3 の開発用テンプレートです
 
-個人的に調べて 2023/9 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。
+個人的に調べて 2023/10 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。
 
-- nuxt:3.7.3
-- vuetify:3.3.16
-- vuetify の設定(plugins)をしています
+- nuxt: 3.7.4
+- vuetify: 3.3.19
+- vitest: 0.34.6
+- typescript: 5.2.2
+- @nuxt/devtools: 0.8.5
 - eslint/prettier/stylelint の設定を追加しています
-- scss の stylelint 設定も追加しています
-- sass は dart sass を入れています
-- order は stylelint-config-recess-order を入れています。
-- vscode の拡張機能 prettier/eslint/stylelint/Vue Language Features (Volar) を入れることをお勧めします
-- nuxt/devtools を入れています
-
-## The preparation method
-
-1. `npx nuxi init appName`<br>
-
-2. `yarn add -D vuetify vite-plugin-vuetify sass @mdi/font @nuxtjs/critters`<br>
-
-3. `yarn add -D typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser @nuxtjs/eslint-config-typescript @types/node`<br>
-
-4. `yarn add -D eslint eslint-config-prettier eslint-plugin-nuxt prettier`<br>
-
-5. `yarn add -D stylelint stylelint-config-recess-order stylelint-config-standard-scss postcss-html`<br>
-
-6. `npx nuxi@latest devtools enable`<br>
+- 下記 vscode の拡張機能を入れることをお勧めします
+  - prettier
+  - eslint
+  - stylelint
+  - Vue Language Features (Volar)
+  - TypeScript Vue Plugin (Volar)
 
 ## Getting Started
 
-1. `yarn install`
+### For Local
 
-2. `yarn dev`
+1. `npm install`
+2. `npm run dev`
+
+### For Dokcer
+
+1. `docker compose build`
+2. `docker compose up`
+
+### For test
+
+1. `npm run test:ui`
