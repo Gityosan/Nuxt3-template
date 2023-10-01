@@ -1,0 +1,17 @@
+*/node_modules*
+*.log*
+*/.nuxt*
+*/.nitro*
+*/.cache*
+*/.output*
+*/.env*
+*/dist*
+*/coverage*
+
+# config files
+.eslintrc.js
+.stylelintrc.js
+.prettierrc
+.gitignore
+
+
