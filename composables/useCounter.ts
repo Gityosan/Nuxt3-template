@@ -1,4 +1,4 @@
-const useCounter = () => {
+export const useCounter = () => {
   const count = useState('count', () => 0)
 
   const increment = () => count.value++
@@ -11,5 +11,3 @@ const useCounter = () => {
     decrement
   }
 }
-
-export default useCounter
