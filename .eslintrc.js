@@ -10,9 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
     '@nuxtjs/eslint-config-typescript',
-    'plugin:vitest/recommended',
-    'prettier',
-    'plugin:storybook/recommended'
+    'prettier'
   ],
   rules: {
     // global settings
@@ -41,5 +39,30 @@ module.exports = {
       }
     ]
     // nuxt settings
-  }
+  },
+  overrides: [
+    {
+      files: ['test/**/*.{test,spec}.ts'],
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:vitest/recommended',
+        'prettier'
+      ]
+    },
+    {
+      files: [
+        '../stories/**/*.mdx',
+        '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+        '../components/**/*.stories.mdx',
+        '../components/**/*.stories.@(js|jsx|ts|tsx)'
+      ],
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:storybook/recommended',
+        'prettier'
+      ]
+    }
+  ]
 }

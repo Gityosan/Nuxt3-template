@@ -1,5 +1,4 @@
 import { mount } from '@vue/test-utils'
-// @ts-ignore
 import AtomText from '@/components/atom/text/index.vue'
 const props = {
   text: 'sample',
