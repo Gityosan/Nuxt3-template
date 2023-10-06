@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@mdi/font": "^7.2.96",
-    "@nuxt/devtools": "^0.8.5",
+    "@nuxt/devtools": "^1.0.0-beta.0",
     "@nuxtjs/critters": "^0.5.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@storybook/addon-essentials": "^7.4.5",
@@ -28,8 +28,8 @@
     "@storybook/vue3": "^7.4.5",
     "@storybook/vue3-vite": "^7.4.5",
     "@types/node": "^20.8.0",
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
     "@vitest/coverage-v8": "^0.34.6",
     "@vitest/ui": "^0.34.6",
     "@vue/test-utils": "^2.4.1",
@@ -42,7 +42,7 @@
     "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.68.0",
+    "sass": "^1.69.0",
     "storybook": "^7.4.5",
     "stylelint": "^15.10.3",
     "stylelint-config-recess-order": "^4.3.0",
@@ -52,6 +52,6 @@
     "unplugin-vue-components": "^0.25.2",
     "vite-plugin-vuetify": "^1.0.2",
     "vitest": "^0.34.6",
-    "vuetify": "^3.3.19"
+    "vuetify": "^3.3.20"
   }
 }
