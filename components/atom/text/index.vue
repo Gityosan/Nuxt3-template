@@ -1,14 +1,18 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
+    /*
+     * 表示テキスト
+     */
     comp?: string
+    /* 表示テキスト */
     text?: string | null
     fontSize?: string
     fontWeight?: string
     color?: string
     lineHeight?: string
     style?: object
-    klass?: string | string[]
+    klass?: string
   }>(),
   {
     comp: 'p',

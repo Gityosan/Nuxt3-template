@@ -3,8 +3,8 @@ useHead({ title: 'index' })
 const { count, increment } = useCounter()
 </script>
 <template>
-  <div class="pa-16 wrapper">
-    <div class="d-flex align-center" style="height: 600px; gap: 20px">
+  <div class="wrapper">
+    <div class="d-flex align-center pl-16" style="height: 100dvh">
       <div class="flex-grow-1">
         <h1 class="text-h2 font-weight-bold mb-5" style="line-height: 1.3">Nuxt 3 Template</h1>
         <p class="text-h6 text-grey-darken-2">This repository has the following setup</p>
@@ -27,7 +27,7 @@ const { count, increment } = useCounter()
           <span>{{ count }}</span>
         </div>
       </div>
-      <div class="flex-grow-0 d-flex align-center">
+      <div class="flex-grow-1 d-flex align-center pl-5">
         <img src="/nuxt_logo.svg" style="width: 140px; height: 140px" />
         <v-icon icon="mdi-window-close" size="50" class="text-grey" />
         <img src="/vitest_logo.png" style="width: 140px; height: 140px" />
