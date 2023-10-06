@@ -11,7 +11,8 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     '@nuxtjs/eslint-config-typescript',
     'plugin:vitest/recommended',
-    'prettier'
+    'prettier',
+    'plugin:storybook/recommended'
   ],
   rules: {
     // global settings

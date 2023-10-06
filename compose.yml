@@ -18,23 +18,42 @@ services:
       npm install &&
       npm run dev
       `
-  # prod_nuxt:
-  #   container_name: prod_nuxt
-  #   build:
-  #     context: .
-  #   volumes:
-  #     - .:/frontend:cached
-  #     - nuxt-node-modules:/frontend/node_modules:delegated
-  #   ports:
-  #     - '3001:3001'
-  #   tty: true
-  #   environment:
-  #     - CHOKIDAR_USEPOLLING=true
-  #   command: >
-  #     sh -c `
-  #     npm run build &&
-  #     npm run preview
-  #     `
+  prod_nuxt:
+    container_name: prod_nuxt
+    build:
+      context: .
+    volumes:
+      - .:/frontend:cached
+      - nuxt-node-modules:/frontend/node_modules:delegated
+    ports:
+      - '3001:3001'
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - PORT=3001
+    command: >
+      sh -c `
+      npm install &&
+      npm run build &&
+      node ./.output/server/index.mjs
+      `
+  storybook:
+    container_name: storybook
+    build:
+      context: .
+    volumes:
+      - .:/frontend:cached
+      - nuxt-node-modules:/frontend/node_modules:delegated
+    ports:
+      - '6006:6006'
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: >
+      sh -c `
+      npm install &&
+      npm run storybook
+      `
 
 volumes:
   nuxt-node-modules:
