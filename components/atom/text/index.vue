@@ -1,11 +1,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    /*
-     * 表示テキスト
-     */
     comp?: string
-    /* 表示テキスト */
     text?: string | null
     fontSize?: string
     fontWeight?: string
