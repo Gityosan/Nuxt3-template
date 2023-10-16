@@ -4,18 +4,20 @@ import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { Vuetify3Resolver } from 'unplugin-vue-components/resolvers'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 export default defineConfig({
   plugins: [
     Vue(),
     AutoImport({
-      imports: ['vue', 'vue-router', 'vitest']
+      dirs: ['utils', 'composables'],
+      imports: ['vue', 'vue-router', 'vitest'],
+      dts: 'test/auto-imports.d.ts'
     }),
     Components({
       dirs: ['components'],
       resolvers: [Vuetify3Resolver()],
-      dts: '.storybook/components.d.ts'
+      dts: 'test/components.d.ts'
     })
   ],
   resolve: {

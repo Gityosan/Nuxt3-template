@@ -10,6 +10,6 @@
       "@/*": ["../*"]
     }
   },
-  "include": ["./**/*.test.ts", "./**/*.spec.ts"],
+  "include": ["./**/*.test.ts", "./**/*.spec.ts", "auto-imports.d.ts", "components.d.ts"],
   "exclude": []
 }
