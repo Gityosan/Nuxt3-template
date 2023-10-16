@@ -4,12 +4,12 @@
     "target": "ES5",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "types": ["vitest/globals"],
+    "types": [],
     "paths": {
       "@": [".."],
       "@/*": ["../*"]
     }
   },
-  "include": ["./**/*.test.ts", "./**/*.spec.ts"],
+  "include": ["./**/*.ts", "./**/*.stories.ts", "auto-imports.d.ts", "components.d.ts"],
   "exclude": []
 }

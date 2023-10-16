@@ -1,5 +1,5 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
-  "exclude": ["test/**/*.{spec,test}.{ts,js}"]
+  "exclude": ["test/**/*", ".storybook/**/*"]
 }
