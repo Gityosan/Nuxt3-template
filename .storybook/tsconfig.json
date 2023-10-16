@@ -1,15 +1,5 @@
 {
   "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "target": "ES5",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "types": [],
-    "paths": {
-      "@": [".."],
-      "@/*": ["../*"]
-    }
-  },
   "include": ["./**/*.ts", "./**/*.stories.ts", "auto-imports.d.ts", "components.d.ts"],
   "exclude": []
 }

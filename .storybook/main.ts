@@ -1,5 +1,5 @@
 import type { StorybookConfig } from '@storybook/vue3-vite'
-import Components from 'unplugin-vue-components/dist/vite.mjs'
+import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { Vuetify3Resolver } from 'unplugin-vue-components/resolvers'
 import { fileURLToPath, URL } from 'node:url'
