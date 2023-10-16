@@ -1,5 +1,12 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
-  "exclude": ["test/**/*", ".storybook/**/*"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage",
+    "test/**/*",
+    ".storybook/**/*",
+    "./**/*.stories.ts"
+  ]
 }

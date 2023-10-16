@@ -19,10 +19,11 @@ const tsconfig: TSConfig = JSON.parse(cleanContent)
 
 // compilerOptions.paths を Vite の alias に変換
 const aliasEntries = Object.entries(tsconfig.compilerOptions?.paths || {}).map(([key, value]) => ({
-  find: key.replace(/\/\*$/, ''), // 末尾の `/*` を取り除く
-  replacement: fileURLToPath(new URL(value[0].replace(/\/\*$/, ''), import.meta.url)) // 末尾の `/*` を取り除く
-}))
-
+  [key.replace(/\/\*$/, '')]: fileURLToPath(
+    new URL(value[0].replace(/\/\*$/, ''), new URL('../', import.meta.url)),
+  ),
+}));
+const alias = aliasEntries.reduce((acc, entry) => ({ ...acc, ...entry }), {});
 const config: StorybookConfig = {
   stories: [
     '../stories/**/*.mdx',
@@ -114,8 +115,12 @@ const config: StorybookConfig = {
         dts: '.storybook/components.d.ts'
       })
     )
+    config.define = {
+      ...config.define,
+      'process.env': process.env,
+    };
     if (config.resolve) {
-      config.resolve.alias = aliasEntries
+      config.resolve.alias = { ...config.resolve.alias, ...alias };
     }
     return config
   }

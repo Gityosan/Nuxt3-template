@@ -1,5 +1,11 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["./**/*.ts", "./**/*.stories.ts", "auto-imports.d.ts", "components.d.ts"],
+  "include": [
+    "./**/*.ts",
+    "./**/*.stories.ts",
+    "../**/*.stories.ts",
+    "auto-imports.d.ts",
+    "components.d.ts"
+  ],
   "exclude": []
 }
