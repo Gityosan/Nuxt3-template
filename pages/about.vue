@@ -4,7 +4,7 @@ useHead({ title: 'about' })
 <template>
   <div class="pa-16">
     <v-card class="pa-10">
-      <h1 class="text-h4 font-weight-bold mb-5">About Page</h1>
+      <h1 class="text-h4 font-weight-bold mb-5">About Page【WIP】</h1>
 
       <h3 class="text-h5 font-weight-bold mb-5">Docker</h3>
       <h3 class="text-h5 font-weight-bold mb-5">Vitest</h3>
