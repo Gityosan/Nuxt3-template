@@ -51,7 +51,8 @@ const { count, increment, decrement } = useCounter()
             />
           </div>
         </v-card>
-        <nuxt-link to="about">To about page</nuxt-link>
+        <nuxt-link to="about"><p>To about page</p></nuxt-link>
+        <nuxt-link to="prohibited"><p>To prohibited page</p></nuxt-link>
       </div>
       <div class="flex-grow-1 d-flex align-center pl-5">
         <img src="/nuxt_logo.svg" style="width: 140px; height: 140px" />
