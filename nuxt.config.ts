@@ -22,12 +22,13 @@ export default defineNuxtConfig({
     transpile: ['vuetify']
   },
   modules: [
-    '@nuxtjs/critters',
     (options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         if (config.plugins) config.plugins.push(vuetify())
       })
-    }
+    },
+    '@nuxtjs/critters',
+    '@nuxtjs/storybook'
   ],
   critters: {
     config: {
