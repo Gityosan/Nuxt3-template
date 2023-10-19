@@ -1,6 +1,5 @@
 <script setup lang="ts">
 useHead({ title: 'index' })
-const { count, increment, decrement } = useCounter()
 </script>
 <template>
   <div class="wrapper">
@@ -19,38 +18,7 @@ const { count, increment, decrement } = useCounter()
           font-weight="font-weight-regular"
           class="text-grey-darken-2"
         />
-        <v-card class="pr-5 pl-2 mt-2 mb-8" style="width: fit-content">
-          <div class="d-flex align-center">
-            <v-hover v-slot="{ isHovering, props }">
-              <v-btn
-                flat
-                :icon="isHovering ? 'mdi-thumb-up' : 'mdi-thumb-up-outline'"
-                class="text-red"
-                style="cursor: pointer; transition: all 0.3s ease-out 0s"
-                @click="increment()"
-                v-bind="props"
-                :ripple="false"
-              />
-            </v-hover>
-            <v-hover v-slot="{ isHovering, props }">
-              <v-btn
-                flat
-                :icon="isHovering ? 'mdi-thumb-down' : 'mdi-thumb-down-outline'"
-                class="text-blue"
-                style="cursor: pointer; transition: all 0.3s ease-out 0s"
-                @click="decrement()"
-                v-bind="props"
-                :ripple="false"
-              />
-            </v-hover>
-            <atom-text
-              :text="`${count}`"
-              color="text-grey-darken-2"
-              class="text-right"
-              style="min-width: 30px; font-family: 'Roboto Condensed', sans-serif"
-            />
-          </div>
-        </v-card>
+        <module-counter class="mt-2 mb-8" />
         <nuxt-link to="about"><p>To about page</p></nuxt-link>
         <nuxt-link to="prohibited"><p>To prohibited page</p></nuxt-link>
       </div>
