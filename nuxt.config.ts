@@ -59,5 +59,8 @@ export default defineNuxtConfig({
     timeline: {
       enabled: true
     }
+  },
+  experimental: {
+    renderJsonPayloads: false
   }
 })
