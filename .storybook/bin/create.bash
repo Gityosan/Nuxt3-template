@@ -7,7 +7,7 @@ if [ "$#" -ge 3 ]; then
 fi
 
 # フォルダの相対パスを取得
-input_folder_path=${1:-src/assets/base_components}
+input_folder_path=${1:-components}
 output_folder_path=${2:-$input_folder_path}
 
 # 絶対パスに変換
@@ -15,7 +15,7 @@ input_folder_absolute_path=$(realpath "$input_folder_path")
 output_folder_absolute_path=$(realpath "$output_folder_path")
 
 # output_folder_absolute_pathからinput_folder_absolute_pathへの相対パスを計算
-script_dir=$(cd "$(dirname "$0")"; pwd)
+script_dir=$(cd "$(dirname "$0")" || exit; pwd)
 PATH="$PATH:$script_dir"
 source pathlib.bash
 from_output_to_input_relative_path=$(path_get_relative "$output_folder_absolute_path" "$input_folder_absolute_path")
@@ -31,7 +31,7 @@ find "$input_folder_path" -type f -name "*.vue" | while read -r vue_file_path; d
   upper_camel_case_file_name=$(echo "$file_name_no_ext" | awk -F'[-_]' '{ for(i=1; i<=NF; i++) $i=toupper(substr($i,1,1)) tolower(substr($i,2)); }1' OFS='')
 
   # 対応するstories.tsファイルのパスを生成
-  vue_file="${vue_file_path#$input_folder_path}"
+  vue_file="${vue_file_path#"$input_folder_path"}"
   stories_file_path="${output_folder_path}${vue_file%.*}.stories.ts"
 
   # 既に同名のstories.tsファイルが存在する場合はスキップ
@@ -42,7 +42,7 @@ find "$input_folder_path" -type f -name "*.vue" | while read -r vue_file_path; d
 
   # Extract props section using awk
   props_output=$(awk '
-  BEGIN { count=0; flag=0; key=""; value=""; nestLevel=0; print "{"; }
+  BEGIN { flag=0; key=""; value=""; nestLevel=0; print "{"; }
 
   /props: {/ { flag=1; nestLevel=1; }
 
@@ -61,16 +61,48 @@ find "$input_folder_path" -type f -name "*.vue" | while read -r vue_file_path; d
     # Count braces to determine nest level and end of props section
     for(i=1; i<=length($0); i++) {
       char = substr($0, i, 1);
-      if (char == "{") { nestLevel++; count++; }
-      if (char == "}") { nestLevel--; count--; }
+      if (char == "{") { nestLevel++; }
+      if (char == "}") { nestLevel--; }
     }
-    if (count == 0 && flag) exit;
+    if (nestLevel == 0 && flag) exit;
   }
   END { print "  },"; }
-  ' $vue_file_path)
+  ' "$vue_file_path")
 
   if [[ -n $props_output ]]; then
     args=$props_output
+  fi
+
+  define_props_output=$(awk '
+  BEGIN { flag=0; key=""; value=""; nestLevel=0; print "{"; }
+
+  /defineProps.*\({/ { flag=1; }
+
+  flag { 
+    # Extract key only at nestLevel 1
+    if ($1 ~ /^[a-zA-Z0-9]+:$/ && nestLevel == 1) {
+      key = substr($1, 1, length($1)-1);
+    }
+    # Extract default value
+    if ($1 ~ /^default:/) {
+      value = $0;
+      sub(/[[:space:]]*default:/, "", value);
+      sub(/,.*$/, "", value);
+      if (value != "") { printf "%*s%s:%s,\n", (nestLevel - 1) * 2, "", key, value; }
+    }
+    # Count braces to determine nest level and end of props section
+    for(i=1; i<=length($0); i++) {
+      char = substr($0, i, 1);
+      if (char == "{") { nestLevel++; }
+      if (char == "}") { nestLevel--; }
+    }
+    if (nestLevel == 0 && flag) exit;
+  }
+  END { print "  },"; }
+  ' "$vue_file_path")
+
+  if [[ -n $define_props_output ]]; then
+    args=$define_props_output
   fi
 
   with_defaults_output=$(awk '
@@ -83,7 +115,7 @@ find "$input_folder_path" -type f -name "*.vue" | while read -r vue_file_path; d
       exit;
     }
   }
-  ' $vue_file_path)
+  ' "$vue_file_path")
   if [[ -n $with_defaults_output ]]; then
     args=$with_defaults_output
   fi
