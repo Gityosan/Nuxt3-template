@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 useHead({ titleTemplate: (title) => `Nuxt 3 Template | ${title}` })
 </script>
 <template>

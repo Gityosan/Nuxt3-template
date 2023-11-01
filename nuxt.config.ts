@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  components: { global: true, dirs: ['~/components'] },
+  // components: { global: true, dirs: ['~/components'] },
   typescript: {
     shim: false,
     strict: true
@@ -22,13 +22,13 @@ export default defineNuxtConfig({
     transpile: ['vuetify']
   },
   modules: [
-    (options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-        if (config.plugins) config.plugins.push(vuetify())
-      })
-    },
-    '@nuxtjs/critters',
-    '@nuxtjs/storybook'
+    // (options, nuxt) => {
+    //   nuxt.hooks.hook('vite:extendConfig', (config) => {
+    //     if (config.plugins) config.plugins.push(vuetify())
+    //   })
+    // },
+    '@nuxtjs/critters'
+    // '@nuxtjs/storybook'
   ],
   critters: {
     config: {
@@ -37,30 +37,28 @@ export default defineNuxtConfig({
     }
   },
   vite: {
-    resolve: {
-      alias: {
-        './runtimeConfig': './runtimeConfig.browser'
-      }
-    },
-    define: {
-      'window.global': {},
-      'process.env.DEBUG': false
-    },
-    server: {
-      watch: {
-        usePolling: true
-      }
-    }
-  },
-  runtimeConfig: { public: {} },
-  devtools: {
-    enabled: true,
-
-    timeline: {
-      enabled: true
-    }
-  },
-  experimental: {
-    renderJsonPayloads: false
+    optimizeDeps: { exclude: ['vuetify', '@storybook/vue3-vite', '@storybook/builder-vite'] }
+    // resolve: {
+    //   alias: {
+    //     './runtimeConfig': './runtimeConfig.browser'
+    //   }
+    // },
+    // define: {
+    //   'window.global': {},
+    //   'process.env.DEBUG': false
+    // },
+    // server: {
+    //   watch: {
+    //     usePolling: true
+    //   }
+    // }
   }
+  // runtimeConfig: { public: {} },
+  // devtools: {
+  //   enabled: true,
+
+  //   timeline: {
+  //     enabled: true
+  //   }
+  // }
 })
