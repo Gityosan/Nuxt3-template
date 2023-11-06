@@ -17,16 +17,18 @@ export default defineNuxtConfig({
     shim: false,
     strict: true
   },
-  css: ['vuetify/styles', '@/assets/index.scss'],
-  build: {
-    transpile: ['vuetify']
-  },
+  // css: ['vuetify/styles', '@/assets/index.scss'],
+  css: ['@/assets/index.scss'],
+  // build: {
+  //   transpile: ['vuetify']
+  // },
   modules: [
     // (options, nuxt) => {
     //   nuxt.hooks.hook('vite:extendConfig', (config) => {
     //     if (config.plugins) config.plugins.push(vuetify())
     //   })
     // },
+    './modules/vuetify/module',
     '@nuxtjs/critters'
     // '@nuxtjs/storybook'
   ],
@@ -36,24 +38,41 @@ export default defineNuxtConfig({
       pruneSource: true
     }
   },
-  vite: {
-    optimizeDeps: { exclude: ['vuetify', '@storybook/vue3-vite', '@storybook/builder-vite'] }
-    // resolve: {
-    //   alias: {
-    //     './runtimeConfig': './runtimeConfig.browser'
-    //   }
-    // },
-    // define: {
-    //   'window.global': {},
-    //   'process.env.DEBUG': false
-    // },
-    // server: {
-    //   watch: {
-    //     usePolling: true
-    //   }
-    // }
-  }
+  // vite: {
+  // build: {
+  //   rollupOptions: {
+  //     external: ['vue-router']
+  //   }
+  // },
+  // optimizeDeps: { exclude: ['vuetify'] },
+  // ssr: {
+  //   noExternal: ['vuetify']
+  // }
+  // resolve: {
+  //   alias: {
+  //     './runtimeConfig': './runtimeConfig.browser'
+  //   }
+  // },
+  // define: {
+  //   'window.global': {},
+  //   'process.env.DEBUG': false
+  // },
+  // server: {
+  //   watch: {
+  //     usePolling: true
+  //   }
+  // }
+  // },
   // runtimeConfig: { public: {} },
+  runtimeConfig: {
+    app: {
+      name: 'Nuxt',
+      version: '1.0.0',
+      baseURL: '/',
+      host: 'localhost',
+      port: 3000
+    }
+  }
   // devtools: {
   //   enabled: true,
 

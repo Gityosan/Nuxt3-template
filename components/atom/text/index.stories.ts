@@ -1,18 +1,15 @@
-import Index from './index.vue'
+import AtomText from './index.vue'
 import type { Meta, StoryObj } from '@storybook/vue3'
-type Story = StoryObj<typeof Index>
-
-const meta: Meta<typeof Index> = {
+const meta = {
   title: 'Atom/Text/Index',
-  component: Index,
-  // render: (args) => ({
-  //   components: { Index },
-  //   setup: () => ({ args }),
-  //   template: `<Index v-bind="args" ></Index>`
-  // }),
+  component: AtomText,
   tags: ['autodocs']
-}
-export const Base: Story = {
+} satisfies Meta<typeof AtomText>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {
   args: {
     text: 'sample',
     fontSize: 'text-subtitle-1',
@@ -21,4 +18,3 @@ export const Base: Story = {
     lineHeight: 'line-height-sm'
   }
 }
-export default meta

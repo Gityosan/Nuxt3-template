@@ -27,12 +27,12 @@ const { count, increment, decrement } = useCounter()
         />
       </v-hover>
       {{ count }}
-      <!-- <atom-text
+      <atom-text
         :text="`${count}`"
         color="text-grey-darken-2"
         class="text-right"
         style="min-width: 30px; font-family: 'Roboto Condensed', sans-serif"
-      /> -->
+      />
     </div>
   </v-card>
 </template>

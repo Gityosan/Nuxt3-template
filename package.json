@@ -54,9 +54,18 @@
     "typescript": "5.2.2",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
+    "vite": "^4.5.0",
     "vite-plugin-vuetify": "^1.0.2",
     "vitest": "0.34.6",
+    "vue": "^3.3.7",
+    "vue-router": "^4.2.5",
     "vuetify": "3.3.23"
   },
-  "packageManager": "yarn@4.0.0"
+  "pnpm": {
+    "override": {
+      "@babel/plugin-proposal-class-properties": "npm:@babel/plugin-transform-class-properties",
+      "@babel/plugin-proposal-optional-chaining": "npm:@babel/plugin-transform-optional-chaining",
+      "@babel/plugin-proposal-nullish-coalescing-operator": "npm:@babel/plugin-transform-nullish-coalescing-operator"
+    }
+  }
 }

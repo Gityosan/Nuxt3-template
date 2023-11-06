@@ -6,8 +6,8 @@ const config: StorybookConfig = {
   stories: [
     '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|ts|tsx)',
-    '../components/atom/**/*.stories.mdx',
-    '../components/atom/**/*.stories.@(js|jsx|ts|tsx)',
+    '../components/**/*.stories.mdx',
+    '../components/**/*.stories.@(js|jsx|ts|tsx)',
     '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'
   ],
@@ -23,14 +23,15 @@ const config: StorybookConfig = {
   docs: { autodocs: 'tag' }
   // viteFinal: async (config: UserConfig) => {
   //   return mergeConfig(config, {
-  //     plugins: [
-  //       Components({
-  //         // resolvers: [Vuetify3Resolver()],
-  //         directoryAsNamespace: true,
-  //         dirs: ['components'],
-  //         dts: '.storybook/components.d.ts'
-  //       })
-  //     ]
+  //     // external: ['vue-router']
+  //     // plugins: [
+  //     //   Components({
+  //     //     // resolvers: [Vuetify3Resolver()],
+  //     //     directoryAsNamespace: true,
+  //     //     dirs: ['components'],
+  //     //     dts: '.storybook/components.d.ts'
+  //     //   })
+  //     // ]
   //   })
   // }
 }
