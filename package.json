@@ -11,8 +11,8 @@
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
+    "test": "vitest run",
+    "test:ui": "vitest run --ui",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
