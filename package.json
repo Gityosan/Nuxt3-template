@@ -12,7 +12,7 @@
     "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
     "test": "vitest run",
-    "test:ui": "vitest run --ui",
+    "test:ui": "vitest --ui",
     "storybook": "storybook dev --port 6006",
     "build-storybook": "storybook build"
   },
