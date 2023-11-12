@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const { count, increment, decrement } = useCounter()
 </script>
 <template>
@@ -26,7 +26,6 @@ const { count, increment, decrement } = useCounter()
           :ripple="false"
         />
       </v-hover>
-      {{ count }}
       <atom-text
         :text="`${count}`"
         color="text-grey-darken-2"
