@@ -1,7 +1,4 @@
 import type { StorybookConfig } from '@storybook-vue/nuxt'
-import { mergeConfig, type UserConfig } from 'vite'
-import Components from 'unplugin-vue-components/vite'
-import { Vuetify3Resolver } from 'unplugin-vue-components/resolvers'
 const config: StorybookConfig = {
   stories: [
     '../stories/**/*.mdx',
@@ -21,18 +18,5 @@ const config: StorybookConfig = {
     options: {}
   },
   docs: { autodocs: 'tag' }
-  // viteFinal: async (config: UserConfig) => {
-  //   return mergeConfig(config, {
-  //     // external: ['vue-router']
-  //     // plugins: [
-  //     //   Components({
-  //     //     // resolvers: [Vuetify3Resolver()],
-  //     //     directoryAsNamespace: true,
-  //     //     dirs: ['components'],
-  //     //     dts: '.storybook/components.d.ts'
-  //     //   })
-  //     // ]
-  //   })
-  // }
 }
 export default config

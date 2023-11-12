@@ -1,6 +1,5 @@
 {
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -13,7 +12,7 @@
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
     "test": "vitest run",
     "test:ui": "vitest --ui",
-    "storybook": "storybook dev --port 6006",
+    "storybook": "storybook dev --port 3001",
     "build-storybook": "storybook build"
   },
   "devDependencies": {
@@ -30,7 +29,7 @@
     "@storybook/builder-vite": "7.5.2",
     "@storybook/testing-library": "^0.2.2",
     "@storybook/vue3": "7.5.2",
-    "@storybook/vue3-vite": "^7.5.2",
+    "@storybook/vue3-vite": "7.5.2",
     "@types/node": "^20.8.10",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
@@ -41,7 +40,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-storybook": "^0.6.15",
     "jsdom": "^22.1.0",
-    "nuxt": "3.8.0",
+    "nuxt": "3.6.5",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
@@ -54,12 +53,9 @@
     "typescript": "5.2.2",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
-    "vite": "^4.5.0",
     "vite-plugin-vuetify": "^1.0.2",
     "vitest": "0.34.6",
-    "vue": "^3.3.7",
-    "vue-router": "^4.2.5",
-    "vuetify": "3.3.23"
+    "vuetify": "3.4.0"
   },
   "pnpm": {
     "override": {
