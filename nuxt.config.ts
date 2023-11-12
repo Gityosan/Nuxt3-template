@@ -1,4 +1,3 @@
-import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   ssr: false,
   app: {
@@ -12,55 +11,28 @@ export default defineNuxtConfig({
       ]
     }
   },
-  components: { global: true, dirs: ['~/components'] },
   typescript: {
     shim: false,
     strict: true
   },
-  css: ['vuetify/styles', '@/assets/index.scss'],
-  build: {
-    transpile: ['vuetify']
-  },
-  modules: [
-    (options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-        if (config.plugins) config.plugins.push(vuetify())
-      })
-    },
-    '@nuxtjs/critters',
-    '@nuxtjs/storybook'
-  ],
+  css: ['@/assets/index.scss'],
+  modules: ['@nuxtjs/critters', '@nuxtjs/storybook', './modules/vuetify/module'],
   critters: {
     config: {
       preload: 'swap',
       pruneSource: true
     }
   },
-  vite: {
-    resolve: {
-      alias: {
-        './runtimeConfig': './runtimeConfig.browser'
-      }
-    },
-    define: {
-      'window.global': {},
-      'process.env.DEBUG': false
-    },
-    server: {
-      watch: {
-        usePolling: true
-      }
+  runtimeConfig: {
+    app: {
+      name: 'Nuxt',
+      version: '1.0.0',
+      baseURL: '/',
+      host: 'localhost',
+      port: 3000
     }
   },
-  runtimeConfig: { public: {} },
   devtools: {
-    enabled: true,
-
-    timeline: {
-      enabled: true
-    }
-  },
-  experimental: {
-    renderJsonPayloads: false
+    enabled: true
   }
 })

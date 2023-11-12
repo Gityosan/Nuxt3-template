@@ -6,11 +6,11 @@ type Story = StoryObj<typeof Counter>
 const meta: Meta<typeof Counter> = {
   title: 'Module/Counter',
   component: Counter,
-  render: (args) => ({
-    components: { Counter },
-    setup: () => ({ args }),
-    template: "<Counter v-bind='args' />"
-  }),
+  // render: (args) => ({
+  //   components: { Counter },
+  //   setup: () => ({ args }),
+  //   template: "<Counter v-bind='args' />"
+  // }),
   tags: ['autodocs']
 }
 export const Default: Story = {
