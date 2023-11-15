@@ -49,20 +49,6 @@ module.exports = {
         'plugin:vitest/recommended',
         'prettier'
       ]
-    },
-    {
-      files: [
-        '../stories/**/*.mdx',
-        '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
-        '../components/**/*.stories.mdx',
-        '../components/**/*.stories.@(js|jsx|ts|tsx)'
-      ],
-      extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:storybook/recommended',
-        'prettier'
-      ]
     }
   ]
 }

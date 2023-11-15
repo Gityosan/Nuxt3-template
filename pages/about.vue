@@ -8,7 +8,6 @@ useHead({ title: 'about' })
 
       <h3 class="text-h5 font-weight-bold mb-5">Docker</h3>
       <h3 class="text-h5 font-weight-bold mb-5">Vitest</h3>
-      <h3 class="text-h5 font-weight-bold mb-5">Storybook</h3>
       <nuxt-link to="/">To index page</nuxt-link>
     </v-card>
   </div>

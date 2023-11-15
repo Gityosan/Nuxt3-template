@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     strict: true
   },
   css: ['@/assets/index.scss'],
-  modules: ['@nuxtjs/critters', '@nuxtjs/storybook', './modules/vuetify/module'],
+  modules: ['@nuxtjs/critters', './modules/vuetify/module'],
   critters: {
     config: {
       preload: 'swap',

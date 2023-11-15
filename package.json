@@ -11,25 +11,13 @@
     "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
     "test": "vitest run",
-    "test:ui": "vitest --ui",
-    "storybook": "storybook dev --port 3001",
-    "build-storybook": "storybook build"
+    "test:ui": "vitest --ui"
   },
   "devDependencies": {
     "@mdi/font": "^7.3.67",
     "@nuxt/devtools": "1.0.0",
     "@nuxtjs/critters": "^0.5.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/storybook": "7.0.0",
-    "@storybook-vue/nuxt": "0.1.9",
-    "@storybook/addon-essentials": "7.5.2",
-    "@storybook/addon-interactions": "7.5.2",
-    "@storybook/addon-links": "7.5.2",
-    "@storybook/blocks": "7.5.2",
-    "@storybook/builder-vite": "7.5.2",
-    "@storybook/testing-library": "^0.2.2",
-    "@storybook/vue3": "7.5.2",
-    "@storybook/vue3-vite": "7.5.2",
     "@types/node": "^20.8.10",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
@@ -38,15 +26,11 @@
     "@vue/test-utils": "^2.4.1",
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-storybook": "^0.6.15",
     "jsdom": "^22.1.0",
     "nuxt": "3.6.5",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "sass": "^1.69.5",
-    "storybook": "7.5.2",
     "stylelint": "^15.11.0",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-standard-scss": "^11.0.0",
@@ -56,12 +40,5 @@
     "vite-plugin-vuetify": "^1.0.2",
     "vitest": "0.34.6",
     "vuetify": "3.4.0"
-  },
-  "pnpm": {
-    "override": {
-      "@babel/plugin-proposal-class-properties": "npm:@babel/plugin-transform-class-properties",
-      "@babel/plugin-proposal-optional-chaining": "npm:@babel/plugin-transform-optional-chaining",
-      "@babel/plugin-proposal-nullish-coalescing-operator": "npm:@babel/plugin-transform-nullish-coalescing-operator"
-    }
   }
 }

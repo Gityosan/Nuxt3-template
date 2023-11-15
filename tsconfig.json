@@ -5,8 +5,6 @@
     "node_modules",
     "dist",
     "coverage",
-    "test/**/*",
-    ".storybook/**/*",
-    "./**/*.stories.ts"
+    "test/**/*"
   ]
 }

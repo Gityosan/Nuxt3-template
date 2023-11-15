@@ -31,16 +31,6 @@ services:
       npm run build &&
       node ./.output/server/index.mjs
       `
-  storybook:
-    container_name: storybook
-    <<: *common-settings
-    ports:
-      - '6006:6006'
-    command: >
-      sh -c `
-      npm install &&
-      npm run storybook
-      `
   vitest:
     container_name: vitest
     <<: *common-settings

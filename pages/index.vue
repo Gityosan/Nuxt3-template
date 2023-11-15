@@ -11,7 +11,6 @@ useHead({ title: 'index' })
           <li>Nuxt3</li>
           <li>Docker</li>
           <li>Vitest</li>
-          <li>Storybook</li>
         </ul>
         <atom-text
           text="Composable: useCounter example"
