@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@mdi/font": "^7.3.67",
-    "@nuxt/devtools": "1.0.0",
+    "@nuxt/devtools": "1.0.3",
     "@nuxtjs/critters": "^0.5.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/node": "^20.8.10",
@@ -27,18 +27,19 @@
     "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "jsdom": "^22.1.0",
-    "nuxt": "3.6.5",
+    "nuxt": "3.8.2",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.3",
     "sass": "^1.69.5",
     "stylelint": "^15.11.0",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-standard-scss": "^11.0.0",
-    "typescript": "5.2.2",
+    "typescript": "5.3.2",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
     "vite-plugin-vuetify": "^1.0.2",
     "vitest": "0.34.6",
-    "vuetify": "3.4.0"
-  }
+    "vuetify": "3.4.2"
+  },
+  "packageManager": "yarn@4.0.2"
 }

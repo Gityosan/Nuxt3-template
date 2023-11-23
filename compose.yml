@@ -13,23 +13,16 @@ services:
     <<: *common-settings
     ports:
       - '3000:3000'
-    command: >
-      sh -c `
-      npm install &&
-      npm run dev
-      `
+    command: npm run dev
   prod_nuxt:
     container_name: prod_nuxt
     <<: *common-settings
     ports:
       - '3001:3001'
-    environment:
-      - PORT=3001
     command: >
       sh -c `
-      npm install &&
       npm run build &&
-      node ./.output/server/index.mjs
+      PORT=3001 node ./.output/server/index.mjs
       `
   vitest:
     container_name: vitest
