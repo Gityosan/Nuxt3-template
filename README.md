@@ -2,14 +2,14 @@
 
 ## Nuxt3 の開発用テンプレートです(A Template for Nuxt3)
 
-個人的に調べて 2023/10 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。(This repository includes essential libraries for developing with Nuxt.js version 3 as of October 2023, based on personal research.)
+個人的に調べて 2023/11 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。(This repository includes essential libraries for developing with Nuxt.js version 3 as of November 2023, based on personal research.)
 
-- nuxt: 3.8.0
-- vuetify: 3.3.23
+- nuxt: 3.8.2
+- vuetify: 3.4.2
 - vitest: 0.34.6
 - typescript: 5.2.2
-- @nuxt/devtools: 1.0.0
-- yarn: 4.0.0
+- @nuxt/devtools: 1.0.3
+- yarn: 4.0.2
 - eslint/prettier/stylelint の設定を追加しています
 - 下記 vscode の拡張機能を入れることをお勧めします
   - prettier
