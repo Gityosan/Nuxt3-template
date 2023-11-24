@@ -17,12 +17,14 @@ export default defineConfig({
     Components({
       dirs: ['components'],
       resolvers: [Vuetify3Resolver()],
+      directoryAsNamespace: true,
       dts: 'test/components.d.ts'
     })
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./', import.meta.url))
+      '@': fileURLToPath(new URL('./', import.meta.url)),
+      '~': fileURLToPath(new URL('./', import.meta.url))
     }
   },
   test: {
