@@ -5,5 +5,3 @@ ENV TZ Asia/Tokyo
 WORKDIR /frontend
 
 COPY package.json ./
-
-RUN npm install
