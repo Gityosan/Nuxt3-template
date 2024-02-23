@@ -28,9 +28,8 @@
 
 ### For Local
 
-1. `yarn dlx @yarnpkg/sdks vscode`
-2. `yarn install`
-3. `yarn run dev`
+1. `yarn run initialize`
+2. `yarn run dev`
 
 ### For Dokcer
 
