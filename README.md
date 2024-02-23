@@ -28,8 +28,9 @@
 
 ### For Local
 
-1. `npm install`
-2. `npm run dev`
+1. `yarn dlx @yarnpkg/sdks vscode`
+2. `yarn install`
+3. `yarn run dev`
 
 ### For Dokcer
 
@@ -38,7 +39,7 @@
 
 ### For test
 
-1. `npm run test:ui`
+1. `yarn run test:ui`
 
 ### If you encounter the Can't find module yarn-3.x.x.cjs error...
 

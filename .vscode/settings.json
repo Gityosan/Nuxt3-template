@@ -13,8 +13,21 @@
   "editor.guides.bracketPairs": true,
   "git.ignoreLimitWarning": true,
   "eslint.run": "onSave",
-  "stylelint.validate": ["css", "scss", "less", "postcss"],
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "less",
+    "postcss"
+  ],
   "css.validate": false,
   "scss.validate": false,
-  "less.validate": false
+  "less.validate": false,
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

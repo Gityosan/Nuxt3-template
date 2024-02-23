@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "initialize": "corepack enable && yarn set version stable && yarn install && yarn dlx @yarnpkg/sdks vscode",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
