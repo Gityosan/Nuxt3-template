@@ -5,9 +5,9 @@
   "editor.hover.enabled": false,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": false,
-    "source.fixAll.stylelint": true,
-    "source.fixAll.eslint": true
+    "source.organizeImports": "never",
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.guides.bracketPairs": true,
