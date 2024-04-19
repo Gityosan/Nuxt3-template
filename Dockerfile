@@ -4,8 +4,6 @@ ENV TZ Asia/Tokyo
 
 WORKDIR /frontend
 
-RUN corepack enable && yarn set version 4.1.0 && yarn config set nodeLinker pnp
-
 COPY package.json yarn.lock ./
 
 RUN yarn install

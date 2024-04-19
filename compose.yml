@@ -4,6 +4,7 @@ x-common-settings: &common-settings
   build: .
   volumes:
     - .:/frontend:cached
+    - nuxt-node-modules:/frontend/node_modules:delegated
   tty: true
 
 services:
