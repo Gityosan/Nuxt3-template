@@ -1065,7 +1065,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/devtools@npm:^1.1.5, @nuxt/devtools@npm:^1.2.0":
+"@nuxt/devtools@npm:^1.1.5":
   version: 1.2.0
   resolution: "@nuxt/devtools@npm:1.2.0"
   dependencies:
@@ -9084,7 +9084,6 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@mdi/font": "npm:^7.4.47"
-    "@nuxt/devtools": "npm:^1.2.0"
     "@nuxtjs/critters": "npm:^0.7.1"
     "@nuxtjs/eslint-config-typescript": "npm:^12.1.0"
     "@types/node": "npm:^20.12.7"

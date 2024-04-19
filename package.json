@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "@mdi/font": "^7.4.47",
-    "@nuxt/devtools": "^1.2.0",
     "@nuxtjs/critters": "^0.7.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/node": "^20.12.7",

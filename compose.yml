@@ -4,7 +4,6 @@ x-common-settings: &common-settings
   build: .
   volumes:
     - .:/frontend:cached
-    - nuxt-node-modules:/frontend/node_modules:delegated
   tty: true
 
 services:
@@ -13,7 +12,7 @@ services:
     <<: *common-settings
     ports:
       - '3000:3000'
-    command: sh -c "npx nuxt dev --port 3000"
+    command: sh -c "yarn run dev --port 3000"
     env_file: .env
     environment:
       - HOST=0.0.0.0
@@ -22,7 +21,7 @@ services:
     <<: *common-settings
     ports:
       - '3001:3001'
-    command: sh -c "npx nuxt build && node .output/server/index.mjs"
+    command: sh -c "yarn run build && node .output/server/index.mjs"
     env_file: .env
     environment:
       - HOST=0.0.0.0
@@ -31,8 +30,7 @@ services:
     container_name: vitest
     <<: *common-settings
     env_file: .env
-    command: >
-      sh -c ""npx vitest run --exit"
+    command: sh -c "yarn run test --exit"
 
 volumes:
   nuxt-node-modules:
