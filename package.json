@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "initialize": "corepack enable && yarn set version stable && yarn install && yarn dlx @yarnpkg/sdks vscode",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -9,8 +8,8 @@
     "lint:js": "eslint --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint:prettier": "prettier --check .",
-    "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
+    "lintfix": "prettier --write --list-different . && npm run lint:js --fix && npm run lint:style --fix",
     "test": "vitest run",
     "test:ui": "vitest --ui"
   },
@@ -41,5 +40,5 @@
     "vitest": "^1.5.0",
     "vuetify": "^3.5.16"
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "npm@4.1.0"
 }
