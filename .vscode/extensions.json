@@ -1,7 +1,10 @@
 {
   "recommendations": [
-    "arcanis.vscode-zipfs",
+    "Vue.volar",
+    "vitest.explorer",
+    "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "stylelint.vscode-stylelint",
+    "biomejs.biome"
   ]
 }

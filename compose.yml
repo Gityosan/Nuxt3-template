@@ -13,30 +13,26 @@ services:
     <<: *common-settings
     ports:
       - '3000:3000'
-    command: >
-      sh -c `
-      npm install &&
-      npm run dev
-      `
+    command: sh -c "npx nuxt dev --port 3000"
+    env_file: .env
+    environment:
+      - HOST=0.0.0.0
   prod_nuxt:
     container_name: prod_nuxt
     <<: *common-settings
     ports:
       - '3001:3001'
-    command: >
-      sh -c `
-      npm install &&
-      npm run build &&
-      PORT=3001 node ./.output/server/index.mjs
-      `
+    command: sh -c "npx nuxt build && node .output/server/index.mjs"
+    env_file: .env
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3001 # "PORT" must be uppercase.
   vitest:
     container_name: vitest
     <<: *common-settings
+    env_file: .env
     command: >
-      sh -c `
-      npm install &&
-      npm run test --exit
-      `
+      sh -c ""npx vitest run --exit"
 
 volumes:
   nuxt-node-modules:

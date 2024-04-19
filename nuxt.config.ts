@@ -11,10 +11,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  typescript: {
-    shim: false,
-    strict: true
-  },
+  typescript: { shim: false, strict: true },
   css: ['@/assets/index.scss'],
   modules: ['@nuxtjs/critters', './modules/vuetify/module'],
   critters: {
@@ -32,7 +29,5 @@ export default defineNuxtConfig({
       port: 3000
     }
   },
-  devtools: {
-    enabled: true
-  }
+  devtools: { enabled: true }
 })

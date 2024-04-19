@@ -2,22 +2,13 @@
 
 ## Nuxt3 の開発用テンプレートです(A Template for Nuxt3)
 
-個人的に調べて 2023/11 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。(This repository includes essential libraries for developing with Nuxt.js version 3 as of November 2023, based on personal research.)
+個人的に調べて 2024/04 時点の Nuxt.js ver3 の開発をする上で必要ライブラリを入れたリポジトリです。(This repository includes essential libraries for developing with Nuxt.js version 3 as of April 2024, based on personal research.)
 
-- nuxt: 3.9.1
-- vuetify: 3.4.10
-- vitest: 1.2.0
-- typescript: 5.3.3
-- @nuxt/devtools: 1.0.3
-- yarn: 4.0.2
-- eslint/prettier/stylelint の設定を追加しています
-- 下記 vscode の拡張機能を入れることをお勧めします
-  - prettier
-  - eslint
-  - stylelint
-  - Vue Language Features (Volar)
-  - TypeScript Vue Plugin (Volar)
-- extensions の検索欄に`@builtin typescript`と打ち、出てくる`「TypeScript と JavaScript の言語機能(TypeScript and JavaScript Language Features)」`の中の`「無効にする(ワークスペース)(Disable (Workspace)」`を押して無効化してください
+- nuxt: 3.11.2
+- vuetify: 3.5.16
+- vitest: 1.5.0
+- typescript: 5.4.5
+- yarn: 4.1.0
 
 ## Getting Started
 
