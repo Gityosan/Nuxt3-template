@@ -11,7 +11,7 @@ services:
     <<: *common-settings
     ports:
       - '3000:3000'
-    command: sh -c "npm run dev --port 3000"
+    command: npx nuxt dev --port 3000
     env_file: .env
     environment:
       - HOST=0.0.0.0
