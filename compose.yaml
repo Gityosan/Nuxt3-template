@@ -1,5 +1,3 @@
-version: '3.9'
-
 x-common-settings: &common-settings
   build: .
   volumes:
